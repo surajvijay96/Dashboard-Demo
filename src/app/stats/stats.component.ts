@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Chart} from 'chart.js';
-
 
 @Component({
   selector: 'app-stats',
@@ -49,6 +47,20 @@ public radarChartLabels = ['Q1', 'Q2', 'Q3', 'Q4'];
 public pieChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
 public pieChartData = [120, 150, 180, 90];
 public pieChartType = 'pie';
+
+//Line Chart
+
+public lineChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
+public lineChartData = [120, 150, 180, 90];
+public lineChartType = 'line';
+
+//Polar Area Chart
+
+public polarAreaChartLabels = ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'];
+public polarAreaChartData = [300, 500, 100, 40, 120];
+public polarAreaChartType = 'polarArea';
+
+
 
   ngOnInit(){
    

@@ -1,4 +1,7 @@
-<div>
+<table style="width:100%">
+  <tr>
+    <td>
+  <div>
     <div style="display: block" width=50%>
       <canvas baseChart
               [datasets]="barChartData"
@@ -9,25 +12,50 @@
       </canvas>
     </div>
   </div>
+  </td>
+  <td>
   <div style="display: block" width=50%>
     <canvas baseChart
                 [data]="doughnutChartData"
                 [labels]="doughnutChartLabels"
                 [chartType]="doughnutChartType"></canvas>
   </div>
+</td>
+<td>
+  <div style="display: block" width=50%>
+    <canvas baseChart
+            [datasets]="polarAreaChartData"
+            [labels]="polarAreaChartLabels"
+            [chartType]="polarAreaChartType"></canvas>
+  </div>  
 
+</td>
+</tr>
+<tr>
+  <td>
   <div style="display: block" width=50%>
     <canvas baseChart
             [datasets]="radarChartData"
             [labels]="radarChartLabels"
             [chartType]="radarChartType"></canvas>
   </div>
-
+</td>
+<td>
   <div style="display: block" width=50%>
     <canvas baseChart
             [data]="pieChartData"
             [labels]="pieChartLabels"
             [chartType]="pieChartType"></canvas>
   </div>
-
+</td>
+<td>
+  <div style="display: block" width=50%>
+  <canvas baseChart
+          [data]="lineChartData"
+          [labels]="lineChartLabels"
+          [chartType]="lineChartType"></canvas>
+  </div>
+</td>
+</tr>
+</table>
   <router-outlet></router-outlet>
