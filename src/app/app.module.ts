@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatToolbarModule, MatButtonModule, MatIconModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule, MatIconModule} from '@angular/material/';
 
 
 import { AppComponent } from './app.component';
@@ -13,6 +13,11 @@ import { StatsComponent } from './stats/stats.component';
 
 import { ChartsModule } from 'ng2-charts';
 import { RouterModule } from '@angular/router';
+import { LineChartComponent } from './line-chart/line-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { RadarChartComponent } from './radar-chart/radar-chart.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    StatsComponent
+    StatsComponent,
+    LineChartComponent,
+    BarChartComponent,
+    PieChartComponent,
+    DoughnutChartComponent,
+    RadarChartComponent
   ],
   imports: [
     BrowserModule,
