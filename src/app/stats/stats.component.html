@@ -1,8 +1,8 @@
-<table style="width: 100%;height: 90%;">
+<table  style="margin: 2%">
   <tr>
     <td>
-  <div>
-    <div style="display: block" width=50%>
+      <h3>Number of Male and Female employees in the company from the year 2010 to 2020</h3>
+    <div style="display: block">
       <canvas baseChart
               [datasets]="barChartData"
               [labels]="barChartLabels"
@@ -11,10 +11,10 @@
               [chartType]="barChartType">
       </canvas>
     </div>
-  </div>
   </td>
   <td>
-  <div style="display: block" width=50%>
+    <h3>Company Income from Clients in Percentage</h3>
+  <div style="display: block" *ngIf="isDataAvailable2">
     <canvas baseChart
                 [data]="doughnutChartData"
                 [labels]="doughnutChartLabels"
@@ -22,18 +22,21 @@
   </div>
 </td>
 <td>
-  <div style="display: block" width=50%>
+  <h3>Increase of Dollors price against Rupees from the year 2010 to 2020</h3>
+  <div style="display: block" *ngIf="isDataAvailable3">
     <canvas baseChart
-            [datasets]="polarAreaChartData"
-            [labels]="polarAreaChartLabels"
-            [chartType]="polarAreaChartType"></canvas>
-  </div>  
+            [data]="lineChartData3"
+            [labels]="lineChartLabels3"
+            [chartType]="lineChartType3"></canvas>
+    </div>
+
 
 </td>
 </tr>
 <tr>
   <td>
-  <div style="display: block" width=50%>
+    <h3>Audi Compnay profit in the year 2018 and 2019 in all the 4 quarters in millions</h3>
+  <div style="display: block">
     <canvas baseChart
             [datasets]="radarChartData"
             [labels]="radarChartLabels"
@@ -41,7 +44,8 @@
   </div>
 </td>
 <td>
-  <div style="display: block" width=50%>
+  <h3>Age of Employees in Percentage</h3>
+  <div style="display: block" *ngIf="isDataAvailable1" >
     <canvas baseChart
             [data]="pieChartData"
             [labels]="pieChartLabels"
@@ -49,7 +53,8 @@
   </div>
 </td>
 <td>
-  <div style="display: block" width=50%>
+  <h3>Company Profit from the year 2010 to 2020 in Millions </h3>
+  <div style="display: block" *ngIf="isDataAvailable">
   <canvas baseChart
           [data]="lineChartData"
           [labels]="lineChartLabels"

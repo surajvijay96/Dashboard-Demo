@@ -19,6 +19,10 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { RadarChartComponent } from './radar-chart/radar-chart.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { LineChart2Component } from './line-chart2/line-chart2.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { RadarChartComponent } from './radar-chart/radar-chart.component';
     BarChartComponent,
     PieChartComponent,
     DoughnutChartComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    LineChart2Component
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import { RadarChartComponent } from './radar-chart/radar-chart.component';
     MatIconModule,
     BrowserModule,
     RouterModule,
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

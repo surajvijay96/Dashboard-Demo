@@ -1,6 +1,7 @@
-<div style="margin:5%;">
+<div style="text-align: center"><h1>Age of Employees in Percentage</h1></div>
+<div style="margin-left:5%; margin-right: 5%; " *ngIf="isDataAvailable">
     <canvas baseChart
             [data]="pieChartData"
             [labels]="pieChartLabels"
-            [chartType]="pieChartType"></canvas>
+            [chartType]="pieChartType"></canvas> 
   </div>

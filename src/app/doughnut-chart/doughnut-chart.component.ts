@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-doughnut-chart',
@@ -7,15 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoughnutChartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   // Doughnut Chart
 
-public doughnutChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
-public doughnutChartData = [120, 150, 180, 90];
+public doughnutChartLabels = [];
+public doughnutChartData = [];
 public doughnutChartType = 'doughnut';
+public isDataAvailable:boolean = false;
+public temp: any = [];
+
+
 
   ngOnInit(): void {
+    let res = this.http.get ( "http://localhost:8080/displaydoughnutchart" );
+    res.subscribe(data => {this.temp = data; this.firstCall();
+    });
+  }
+  firstCall(): void {
+
+    let labels:string[] = [];
+    let data:number[] = [];
+
+    this.temp.forEach(ele => {
+      labels.push(ele.companyname);
+      data.push(ele.percent);
+    });
+    this.doughnutChartData = data;
+    this.doughnutChartLabels = labels;
+    console.log(this.temp);
+    this.isDataAvailable = true;
   }
 
 }

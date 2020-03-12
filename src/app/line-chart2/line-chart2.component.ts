@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-line-chart',
-  templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.css']
+  selector: 'app-line-chart2',
+  templateUrl: './line-chart2.component.html',
+  styleUrls: ['./line-chart2.component.css']
 })
-export class LineChartComponent implements OnInit {
+export class LineChart2Component implements OnInit {
 
   constructor(private http:HttpClient) { }
-  
-  //Line Chart
+
+  //Line Chart 2
 
   public lineChartLabels = [];
   public lineChartData = [];
@@ -19,10 +19,13 @@ export class LineChartComponent implements OnInit {
   public temp: any = [];
 
   ngOnInit(): void {
-    let res = this.http.get ( "http://localhost:8080/displayline" );
+
+    let res = this.http.get ( "http://localhost:8080/displayline2" );
     res.subscribe(data => {this.temp = data; this.firstCall();
     });
+
   }
+
   firstCall(): void {
 
     let labels:string[] = [];
@@ -30,7 +33,7 @@ export class LineChartComponent implements OnInit {
 
     this.temp.forEach(ele => {
       labels.push(ele.year);
-      data.push(ele.profit);
+      data.push(ele.price);
     });
     this.lineChartData = data;
     this.lineChartLabels = labels;

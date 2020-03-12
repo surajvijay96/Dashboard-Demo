@@ -7,6 +7,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { RadarChartComponent } from './radar-chart/radar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { LineChart2Component } from './line-chart2/line-chart2.component';
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'stats',component: StatsComponent},
   {path:'lineChart',component: LineChartComponent},
   {path:'barChart',component: BarChartComponent},
+  {path:'lineChart2',component: LineChart2Component},
   {path:'doughnutChart',component: DoughnutChartComponent},
   {path:'radarChart',component: RadarChartComponent},
   {path:'pieChart',component: PieChartComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path:'home/doughnutChart',component: DoughnutChartComponent},
   {path:'home/radarChart',component: RadarChartComponent},
   {path:'home/pieChart',component: PieChartComponent},
+  {path:'home/lineChart2',component: LineChart2Component},
+
 
   {path:'',component: HomeComponent},
 
