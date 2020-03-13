@@ -2,7 +2,7 @@
   <tr>
     <td>
       <h3>Number of Male and Female employees in the company from the year 2010 to 2020</h3>
-    <div style="display: block">
+    <div style="display: block" *ngIf="isDataAvailable4">
       <canvas baseChart
               [datasets]="barChartData"
               [labels]="barChartLabels"
@@ -36,7 +36,7 @@
 <tr>
   <td>
     <h3>Audi Compnay profit in the year 2018 and 2019 in all the 4 quarters in millions</h3>
-  <div style="display: block">
+  <div style="display: block" *ngIf="isDataAvailable5">
     <canvas baseChart
             [datasets]="radarChartData"
             [labels]="radarChartLabels"

@@ -1,5 +1,5 @@
 <div style="text-align: center"><h1>Audi Compnay profit in the year 2018 and 2019 in all the 4 quarters in millions</h1></div>
-<div style="margin-left:5%; margin-right: 5%; " width=50%>
+<div style="margin-left:5%; margin-right: 5%; " *ngIf="isDataAvailable" width=50%>
     <canvas baseChart
             [datasets]="radarChartData"
             [labels]="radarChartLabels"

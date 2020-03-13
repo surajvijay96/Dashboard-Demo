@@ -45,7 +45,11 @@ public barChartData = [
       data1.push(ele.numberoffemale);
     });
 
-    this.barChartData.push({data: data, label: "abc"},{data: data1, label: "abcd"});
+    this.barChartData[0].data= data 
+    this.barChartData[0].label="Male"
+    this.barChartData[1].data= data1 
+    this.barChartData[1].label="Female"
+
     this.barChartLabels = labels;
     this.isDataAvailable = true;
 }
